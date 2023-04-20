@@ -29,7 +29,7 @@
 //     } else if (color === "Green") {
 //         return "Grass is Green";
 //     } else {
-//         return "Sorry that color avaliable " + color;
+//         return "Sorry that color is not avaliable " + color;
 //     }
 // }
 // console.log(analyzeColor("Blue"));
@@ -77,7 +77,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
             message = "Tulips are Violet"
             break;
     }
-    return message;
+    return message; "That color is univalibe"
  }
  console.log(analyzeColor("blue"));
 
@@ -91,7 +91,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 /* ########################################################################## */
 var result = analyzeColor(prompt('Please enter a color:'));
-alert(result);
+alert(analyzeColor(result));
 
 /**
  * TODO:
