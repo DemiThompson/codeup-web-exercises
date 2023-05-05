@@ -58,28 +58,23 @@ let random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(number){
-
-
-        return(false);
-     else  {
-        return(true);
-    }
+function isTwo(num) {
+    return num === 2;
 }
-console.log(isTwo(random));
+let randomNumber = Math.floor(Math.random() * 10) + 1;
+console.log(`Is ${randomNumber} equal to 2? ${isTwo(randomNumber)}`);
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
  * restaurant. The function should accept a tip percentage and the total of the
  * bill, and return the amount to tip
  */
-function caculateTip(total, tipPercent){
-    return total = tipPercent;
+function calculateTip(tipPercentage, totalBill) {
+    return totalBill * tipPercentage;
 }
-console.log(caculateTip(0.20, 25))
-console.log(caculateTip(0.25, 25.50))
-console.log(caculateTip(0.15, 33.42))
-
+const tip = calculateTip(0.2, 50);
+console.log(`You should tip $${tip.toFixed(2)}`);
 
 /**
  * TODO:
@@ -87,10 +82,16 @@ console.log(caculateTip(0.15, 33.42))
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-var input1 = prompt("Please eneter  Bill Total");
-var input2 = prompt("Pleas enter tip precentage");
+function calculateTipAmount(total, tipPercentage) {
+    let tipAmount = total * tipPercentage;
+    return tipAmount;
+}
 
-alert("Your tip amount is " + caculateTip(input1, input2));
+let billTotal = prompt("What is the total bill amount?");
+let tipPercentage = prompt("What percentage would you like to tip (in decimal form)?");
+
+let tipAmount = calculateTipAmount(billTotal, tipPercentage);
+alert(`You should tip $${tipAmount.toFixed(2)}.`);
 
 /**
  * TODO:
@@ -106,10 +107,11 @@ alert("Your tip amount is " + caculateTip(input1, input2));
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-function applyDiscount(originalPrice, discountPrecent) {
-    return(originalPrice - (originalPrice))
 
+function applyDiscount(price, discountPercent) {
+    const discountAmount = price * discountPercent;
+    return price - discountAmount;
 }
-let originalPrice  = Prompt("What is the cost of the item?");
-let discountPrecent  = Prompt("What is the Discount?");
-alert("Your total is $" + applyDiscount(originalPrice, discountPrecent))
+
+console.log(applyDiscount(100, 0.2)); // output: 80
+console.log(applyDiscount(45.99, 0.12)); // output: 40.4712
