@@ -9,14 +9,19 @@
 
 body{
     box-sizing:border-box;
-    background-color: #ffffff;
+    background-color: #a1624b;
+    background-image:url("pic3.jpg");
     color: #030303;
     margin:0;
 }
-main{
-    text-align:center;
+main {
+    text-align: center;
 }
-h3{
+legend {
+    text-decoration: underline;
+    color: #e873d8;
+}
+h1{
     line-height:50px;
     margin:0;
 }
@@ -47,13 +52,13 @@ td{
     padding:4px;
 }
 tr{
-    background-color:#9e9;
+    background-color: #ea66b4;
 }
 tr:nth-child(2n){
-    background-color:#9c9;
+    background-color: #ea66b4;
 }
 th{
-    background-color:#99c;
+    background-color: #e71391;
 }
 a:active{
     color:red;
